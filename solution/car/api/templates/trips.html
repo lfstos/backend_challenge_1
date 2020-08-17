@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for trip in trips %}
+            <a href="{% url 'update_trip' trip.id %}">
+                <li>{{ trip.trip }}</li>
+            </a>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'new_trip %}">New Trip</a>
+</body>
+</html>
